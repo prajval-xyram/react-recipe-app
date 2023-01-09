@@ -20,7 +20,7 @@ function Main() {
   };
 
   useEffect(() => {
-    // getRecipes("chicken");
+    getRecipes("chicken");
   }, []);
 
   const getRecipes = async (foodToSearch) => {
@@ -41,7 +41,7 @@ function Main() {
   };
   return (
     <div className="App">
-      <div className={loading && "recipe-loader"}>
+      <div className={loading ? "recipe-loader" : ""}>
         <BounceLoader loading={loading} color="#ff0" cssOverride={override} />
       </div>
       <Header
